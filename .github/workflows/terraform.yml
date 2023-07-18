@@ -33,7 +33,7 @@ jobs:
     - name: install dependencies
       run: |
         sudo apt update -y
-        sudo apt install unzip && sudo apt install nodejs
+        sudo apt install unzip -y && sudo apt install nodejs -y
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
