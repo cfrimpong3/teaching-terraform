@@ -28,6 +28,12 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
+      
+    # Setup dependencies for self-hosted
+    - name: install dependencies
+      run: |
+        sudo apt update -y
+        sudo apt install unzip -y && sudo apt install nodejs -y
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
